@@ -33,6 +33,7 @@ gem 'bcrypt',         '~>3.1.12'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
+  gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -44,6 +45,10 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
 end
+group :production do
+  gem 'pg', '0.20.0'
+end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
