@@ -26,6 +26,8 @@ gem 'rails-controller-testing'
 # Use Active Model has_secure_password
 gem 'bcrypt',         '~>3.1.12'
 gem 'faker',          '2.11'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 gem 'will_paginate', '3.3.0'
 gem 'bootstrap-will_paginate', '1.0.0'
 # Use Active Storage variant
@@ -47,9 +49,10 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
 end
-# group :production do
-#   gem 'pg', '0.20.0'
-# end
+group :production do
+gem 'pg', '0.20.0'
+gem 'fog', '1.42'
+end
 
 
 group :test do
